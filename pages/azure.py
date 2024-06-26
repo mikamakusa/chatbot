@@ -13,7 +13,7 @@ if st.sidebar.button("connect"):
         openai.api_key = api_key
         openai.api_base = endpoint
     else:
-        st.warning('Please fill out all fields')
+        st.sidebar.warning('Please fill out all fields')
 
 if st.sidebar.button("back"):
     st.switch_page("main.py")

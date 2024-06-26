@@ -28,7 +28,7 @@ if st.sidebar.button('Connect'):
         except Exception as e:
             st.error(f'An error occurred : {str(e)}')
     else:
-        st.warning('Please fill out all fields')
+        st.sidebar.warning('Please fill out all fields')
 
 if st.sidebar.button("back"):
     st.switch_page("main.py")
