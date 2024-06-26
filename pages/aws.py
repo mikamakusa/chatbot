@@ -7,7 +7,7 @@ st.title = "AWS Powered Chatbot"
 
 st.sidebar.header('AWS Credentials')
 aws_access_key = st.sidebar.text_input("AWS Access Key : ")
-aws_secret_key = st.sidebar.text_input('AWS Secret Key : ')
+aws_secret_key = st.sidebar.text_input("AWS Secret Key : ")
 aws_region = st.sidebar.text_input('AWS Region : ')
 
 
@@ -29,6 +29,9 @@ if st.sidebar.button('Connect'):
             st.error(f'An error occurred : {str(e)}')
     else:
         st.warning('Please fill out all fields')
+
+if st.sidebar.button("back"):
+    st.switch_page("main.py")
 
 
 def query_sagemaker_endpoint(input_text):

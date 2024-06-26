@@ -15,6 +15,9 @@ if st.sidebar.button("connect"):
     else:
         st.warning('Please fill out all fields')
 
+if st.sidebar.button("back"):
+    st.switch_page("main.py")
+
 prompt = st.text_input("Prompt")
 engines = [
     "text-davinci-003", "text-curie-001", "text-babbage-001", "text-ada-001", "gpt4"
