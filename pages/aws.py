@@ -19,7 +19,7 @@ if st.sidebar.button('Connect'):
                 aws_secret_access_key=aws_secret_key,
                 region_name=aws_region
             )
-            client = session.client("sagemake-runtime")
+            client = session.client("sagemaker-runtime")
 
         except NoCredentialsError:
             st.error('Invalid AWS credentials')
